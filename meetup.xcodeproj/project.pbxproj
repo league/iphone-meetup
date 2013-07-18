@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B2E9F6F1798191200594E43 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B2E9F6E1798191200594E43 /* DetailViewController.m */; };
 		0B6BF6F11797659C00895B1A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B6BF6F01797659C00895B1A /* CoreLocation.framework */; };
 		0B6BF6F3179765A300895B1A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B6BF6F2179765A300895B1A /* MapKit.framework */; };
 		0B6BF6F617976B4800895B1A /* Meetup.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B6BF6F517976B4800895B1A /* Meetup.m */; };
@@ -25,6 +26,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B2E9F6D1798191200594E43 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		0B2E9F6E1798191200594E43 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		0B6BF6F01797659C00895B1A /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		0B6BF6F2179765A300895B1A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		0B6BF6F417976B4800895B1A /* Meetup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Meetup.h; sourceTree = "<group>"; };
@@ -104,6 +107,8 @@
 				0B6BF6F417976B4800895B1A /* Meetup.h */,
 				0B6BF6F517976B4800895B1A /* Meetup.m */,
 				C1E3E52617971B4400841576 /* ViewController.m */,
+				0B2E9F6D1798191200594E43 /* DetailViewController.h */,
+				0B2E9F6E1798191200594E43 /* DetailViewController.m */,
 				C1E3E50E17971B4400841576 /* Supporting Files */,
 			);
 			path = meetup;
@@ -194,6 +199,7 @@
 				C1E3E51817971B4400841576 /* AppDelegate.m in Sources */,
 				C1E3E52717971B4400841576 /* ViewController.m in Sources */,
 				0B6BF6F617976B4800895B1A /* Meetup.m in Sources */,
+				0B2E9F6F1798191200594E43 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
