@@ -26,7 +26,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    // Do any additional setup after loading the view.
+    NSURLRequest *req = [NSURLRequest requestWithURL:self.meetup.eventUrl];
+    [self.webView loadRequest:req];
 }
 
 - (void)didReceiveMemoryWarning

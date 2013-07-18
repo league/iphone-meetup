@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "Meetup.h"
+#import "DetailViewController.h"
 
 @interface ViewController ()
 
@@ -39,6 +40,13 @@
     MKCoordinateRegion region =
     MKCoordinateRegionMakeWithDistance(loc.coordinate, 10000, 10000);
     [self.mapView setRegion:region];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    DetailViewController *dvc = segue.destinationViewController;
+    NSIndexPath *path = [self.tableView indexPathForSelectedRow];
+    dvc.meetup = [self.meetups objectAtIndex:path.row];
 }
 
 - (void)didReceiveMemoryWarning

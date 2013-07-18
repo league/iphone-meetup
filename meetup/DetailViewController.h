@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Meetup.h"
 
 @interface DetailViewController : UIViewController
-
+@property IBOutlet UIWebView *webView;
+@property Meetup *meetup;
 @end

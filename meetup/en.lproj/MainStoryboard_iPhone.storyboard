@@ -100,6 +100,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="IVw-hT-jhO"/>
+                    <connections>
+                        <outlet property="webView" destination="HzD-Il-jqh" id="FRq-6M-TF0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0F2-Td-mZR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -127,6 +130,9 @@
     <classes>
         <class className="DetailViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/DetailViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
+            </relationships>
         </class>
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
