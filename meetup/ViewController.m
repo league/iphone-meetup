@@ -33,6 +33,12 @@
     self.meetups = [Meetup queryMeetupsNear:loc.coordinate];
     NSLog(@"%@", self.meetups);
     [self.tableView reloadData];
+    for(Meetup *m in self.meetups) {
+        [self.mapView addAnnotation:m];
+    }
+    MKCoordinateRegion region =
+    MKCoordinateRegionMakeWithDistance(loc.coordinate, 10000, 10000);
+    [self.mapView setRegion:region];
 }
 
 - (void)didReceiveMemoryWarning
