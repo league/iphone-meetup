@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0B6BF6F11797659C00895B1A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B6BF6F01797659C00895B1A /* CoreLocation.framework */; };
 		0B6BF6F3179765A300895B1A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B6BF6F2179765A300895B1A /* MapKit.framework */; };
+		0B6BF6F617976B4800895B1A /* Meetup.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B6BF6F517976B4800895B1A /* Meetup.m */; };
 		C1E3E50817971B4400841576 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1E3E50717971B4400841576 /* UIKit.framework */; };
 		C1E3E50A17971B4400841576 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1E3E50917971B4400841576 /* Foundation.framework */; };
 		C1E3E50C17971B4400841576 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1E3E50B17971B4400841576 /* CoreGraphics.framework */; };
@@ -26,6 +27,8 @@
 /* Begin PBXFileReference section */
 		0B6BF6F01797659C00895B1A /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		0B6BF6F2179765A300895B1A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		0B6BF6F417976B4800895B1A /* Meetup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Meetup.h; sourceTree = "<group>"; };
+		0B6BF6F517976B4800895B1A /* Meetup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Meetup.m; sourceTree = "<group>"; };
 		C1E3E50417971B4400841576 /* meetup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = meetup.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1E3E50717971B4400841576 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C1E3E50917971B4400841576 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -98,6 +101,8 @@
 				C1E3E51F17971B4400841576 /* MainStoryboard_iPhone.storyboard */,
 				C1E3E52217971B4400841576 /* MainStoryboard_iPad.storyboard */,
 				C1E3E52517971B4400841576 /* ViewController.h */,
+				0B6BF6F417976B4800895B1A /* Meetup.h */,
+				0B6BF6F517976B4800895B1A /* Meetup.m */,
 				C1E3E52617971B4400841576 /* ViewController.m */,
 				C1E3E50E17971B4400841576 /* Supporting Files */,
 			);
@@ -188,6 +193,7 @@
 				C1E3E51417971B4400841576 /* main.m in Sources */,
 				C1E3E51817971B4400841576 /* AppDelegate.m in Sources */,
 				C1E3E52717971B4400841576 /* ViewController.m in Sources */,
+				0B6BF6F617976B4800895B1A /* Meetup.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
