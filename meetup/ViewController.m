@@ -24,6 +24,28 @@
     self.locManager.delegate = self;
     [self.locManager startUpdatingLocation];
     self.tableView.dataSource = self;
+    self.mapView.delegate = self;
+}
+
+- (MKAnnotationView*)mapView:(MKMapView*)mapView viewForAnnotation:(id<MKAnnotation>)annotation
+{
+    static NSString *reuseId = @"Pin";
+    if(annotation == mapView.userLocation) {
+        return nil;
+    }
+    MKAnnotationView *pin = [mapView dequeueReusableAnnotationViewWithIdentifier:reuseId];
+    if(pin == nil) {
+        pin = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:reuseId];
+    }
+    pin.canShowCallout = YES;
+    pin.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+    return pin;
+}
+
+-(void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control
+{
+    self.selectedMeetup = view.annotation;
+    [self performSegueWithIdentifier:@"mapToWeb" sender:self];
 }
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations

@@ -37,7 +37,7 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <connections>
-                                            <segue destination="Ien-H2-as4" kind="push" id="epo-xw-QYb"/>
+                                            <segue destination="Ien-H2-as4" kind="push" identifier="mapToWeb" id="epo-xw-QYb"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

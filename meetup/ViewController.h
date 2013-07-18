@@ -9,13 +9,15 @@
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
 #import <CoreLocation/CoreLocation.h>
+#import "Meetup.h"
 
-@interface ViewController : UIViewController<CLLocationManagerDelegate, UITableViewDataSource>
+@interface ViewController : UIViewController<CLLocationManagerDelegate, UITableViewDataSource, MKMapViewDelegate>
 @property IBOutlet UISegmentedControl *viewSelector;
 @property IBOutlet UITableView *tableView;
 @property IBOutlet MKMapView *mapView;
 @property NSMutableArray *meetups;
 @property CLLocationManager *locManager;
+@property Meetup *selectedMeetup;
 
 -(IBAction)selectView:(id)sender;
 @end

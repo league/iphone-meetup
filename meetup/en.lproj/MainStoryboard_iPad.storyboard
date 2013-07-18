@@ -30,7 +30,7 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <connections>
-                                            <segue destination="Vel-Lt-czq" kind="push" id="3kx-0W-Z5p"/>
+                                            <segue destination="Vel-Lt-czq" kind="push" identifier="mapToWeb" id="3kx-0W-Z5p"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
