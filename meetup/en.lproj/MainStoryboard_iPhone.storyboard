@@ -42,17 +42,31 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Search" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TKr-SX-4dh">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Z4l-fc-vD3">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="bVL-Jc-jBS"/>
+                                </constraints>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Z4l-fc-vD3" firstAttribute="leading" secondItem="TKr-SX-4dh" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="6ai-4D-RJ1"/>
                             <constraint firstItem="VzS-Ir-LnM" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="BSO-iO-1AI"/>
-                            <constraint firstItem="pSs-Ez-oBG" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="FLh-7a-h73"/>
                             <constraint firstItem="pSs-Ez-oBG" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="HHZ-Fh-zsT"/>
                             <constraint firstItem="VzS-Ir-LnM" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="Ipy-dF-der"/>
                             <constraint firstItem="pSs-Ez-oBG" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="default" id="R3z-id-oLK"/>
-                            <constraint firstItem="VzS-Ir-LnM" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="Z5W-Dp-8ba"/>
+                            <constraint firstAttribute="trailing" secondItem="Z4l-fc-vD3" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="SYM-aG-8hu"/>
                             <constraint firstItem="pSs-Ez-oBG" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="gox-41-N5n"/>
+                            <constraint firstItem="TKr-SX-4dh" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="kgX-Au-F7j"/>
                             <constraint firstItem="VzS-Ir-LnM" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="default" id="lpe-pb-GDB"/>
+                            <constraint firstItem="Z4l-fc-vD3" firstAttribute="centerY" secondItem="TKr-SX-4dh" secondAttribute="centerY" type="default" id="qJK-Wp-SSN"/>
+                            <constraint firstItem="pSs-Ez-oBG" firstAttribute="top" secondItem="TKr-SX-4dh" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="sPh-ap-iZu"/>
+                            <constraint firstItem="TKr-SX-4dh" firstAttribute="top" secondItem="3" secondAttribute="top" constant="20" symbolic="YES" type="default" id="wAp-q2-Kcc"/>
+                            <constraint firstItem="VzS-Ir-LnM" firstAttribute="top" secondItem="TKr-SX-4dh" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="xi4-uI-tWl"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="NUp-ja-YeG">
@@ -71,6 +85,8 @@
                     </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="VzS-Ir-LnM" id="7nH-OH-kvo"/>
+                        <outlet property="searchField" destination="TKr-SX-4dh" id="2bq-ZS-EQH"/>
+                        <outlet property="spinner" destination="Z4l-fc-vD3" id="g80-a0-4OL"/>
                         <outlet property="tableView" destination="pSs-Ez-oBG" id="f1z-tF-PqT"/>
                         <outlet property="viewSelector" destination="fFZ-qv-DrF" id="nBn-4k-H1D"/>
                     </connections>
@@ -90,17 +106,21 @@
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HzD-Il-jqh">
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </webView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="gQx-dA-YTO"/>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="HzD-Il-jqh" firstAttribute="trailing" secondItem="HZb-vB-94J" secondAttribute="trailing" type="default" id="0Xg-AO-jJ3"/>
                             <constraint firstItem="HzD-Il-jqh" firstAttribute="leading" secondItem="HZb-vB-94J" secondAttribute="leading" type="default" id="9eI-Xg-tMC"/>
+                            <constraint firstItem="gQx-dA-YTO" firstAttribute="centerX" secondItem="HzD-Il-jqh" secondAttribute="centerX" type="default" id="9sS-8l-zak"/>
                             <constraint firstItem="HzD-Il-jqh" firstAttribute="top" secondItem="HZb-vB-94J" secondAttribute="top" type="default" id="BVf-gv-8m7"/>
                             <constraint firstItem="HzD-Il-jqh" firstAttribute="bottom" secondItem="HZb-vB-94J" secondAttribute="bottom" type="default" id="Wlg-PG-IbT"/>
+                            <constraint firstItem="gQx-dA-YTO" firstAttribute="centerY" secondItem="HzD-Il-jqh" secondAttribute="centerY" type="default" id="z4Q-AL-51E"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="IVw-hT-jhO"/>
                     <connections>
+                        <outlet property="spinner" destination="gQx-dA-YTO" id="ZEH-mm-jXy"/>
                         <outlet property="webView" destination="HzD-Il-jqh" id="FRq-6M-TF0"/>
                     </connections>
                 </viewController>
@@ -131,6 +151,7 @@
         <class className="DetailViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/DetailViewController.h"/>
             <relationships>
+                <relationship kind="outlet" name="spinner" candidateClass="UIActivityIndicatorView"/>
                 <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
             </relationships>
         </class>
@@ -142,6 +163,8 @@
             <relationships>
                 <relationship kind="action" name="selectView:"/>
                 <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
+                <relationship kind="outlet" name="searchField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="spinner" candidateClass="UIActivityIndicatorView"/>
                 <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
                 <relationship kind="outlet" name="viewSelector" candidateClass="UISegmentedControl"/>
             </relationships>

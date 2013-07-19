@@ -12,21 +12,31 @@
                         <rect key="frame" x="0.0" y="64" width="768" height="960"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="rXG-WW-M6p">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="1054" id="Boh-BC-pkI"/>
-                                    <constraint firstAttribute="width" constant="788" id="XYV-2h-fLi"/>
-                                </constraints>
-                            </mapView>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="mkA-CZ-VWV"/>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="3on-Yr-AwU">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="781" id="GbX-bL-gYP"/>
+                                </constraints>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" id="niw-2B-ojg">
-                                        <rect key="frame" x="0.0" y="22" width="768" height="44"/>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" textLabel="ngv-hI-JI9" detailTextLabel="9Ab-WH-JLj" style="IBUITableViewCellStyleSubtitle" id="niw-2B-ojg">
+                                        <rect key="frame" x="0.0" y="22" width="781" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="748" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="761" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ngv-hI-JI9">
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ab-WH-JLj">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <connections>
@@ -35,15 +45,30 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="3Rd-wp-FY3">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="z5p-ui-TAu"/>
+                                </constraints>
+                            </activityIndicatorView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Search" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="chy-a2-DRm">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="rXG-WW-M6p" firstAttribute="trailing" secondItem="5" secondAttribute="trailing" type="default" id="NND-dO-ssw"/>
-                            <constraint firstItem="3on-Yr-AwU" firstAttribute="top" secondItem="5" secondAttribute="top" type="default" id="ZjI-9N-CGG"/>
-                            <constraint firstItem="rXG-WW-M6p" firstAttribute="bottom" secondItem="5" secondAttribute="bottom" type="default" id="alP-Uu-e1X"/>
-                            <constraint firstItem="3on-Yr-AwU" firstAttribute="bottom" secondItem="5" secondAttribute="bottom" type="default" id="h6R-TK-uP4"/>
-                            <constraint firstItem="3on-Yr-AwU" firstAttribute="leading" secondItem="5" secondAttribute="leading" type="default" id="i3G-GG-y6o"/>
-                            <constraint firstItem="3on-Yr-AwU" firstAttribute="trailing" secondItem="5" secondAttribute="trailing" type="default" id="z1Q-cX-gGv"/>
+                            <constraint firstItem="3Rd-wp-FY3" firstAttribute="top" secondItem="5" secondAttribute="top" constant="20" symbolic="YES" type="default" id="2K8-fi-nkj"/>
+                            <constraint firstAttribute="trailing" secondItem="3Rd-wp-FY3" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="FFf-qb-s2W"/>
+                            <constraint firstItem="mkA-CZ-VWV" firstAttribute="bottom" secondItem="5" secondAttribute="bottom" type="default" id="O2z-kf-6LV"/>
+                            <constraint firstItem="chy-a2-DRm" firstAttribute="centerY" secondItem="3Rd-wp-FY3" secondAttribute="centerY" type="default" id="QPR-J4-W2F"/>
+                            <constraint firstItem="mkA-CZ-VWV" firstAttribute="trailing" secondItem="5" secondAttribute="trailing" type="default" id="Sng-lP-L4j"/>
+                            <constraint firstItem="3Rd-wp-FY3" firstAttribute="leading" secondItem="chy-a2-DRm" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="cgW-gc-MoN"/>
+                            <constraint firstItem="3on-Yr-AwU" firstAttribute="leading" secondItem="5" secondAttribute="leading" type="default" id="edZ-4g-PTF"/>
+                            <constraint firstItem="mkA-CZ-VWV" firstAttribute="leading" secondItem="5" secondAttribute="leading" type="default" id="gKP-o2-PaZ"/>
+                            <constraint firstItem="3on-Yr-AwU" firstAttribute="top" secondItem="chy-a2-DRm" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="gQo-rp-EDm"/>
+                            <constraint firstItem="chy-a2-DRm" firstAttribute="leading" secondItem="5" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="lp4-sB-vUX"/>
+                            <constraint firstItem="3on-Yr-AwU" firstAttribute="bottom" secondItem="5" secondAttribute="bottom" type="default" id="mNZ-wm-7sn"/>
+                            <constraint firstItem="mkA-CZ-VWV" firstAttribute="top" secondItem="chy-a2-DRm" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="qAs-jV-4oy"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="6CN-bf-2g6">
@@ -61,14 +86,16 @@
                         </segmentedControl>
                     </navigationItem>
                     <connections>
-                        <outlet property="mapView" destination="rXG-WW-M6p" id="8e0-te-3zC"/>
+                        <outlet property="mapView" destination="mkA-CZ-VWV" id="vd5-r1-xwt"/>
+                        <outlet property="searchField" destination="chy-a2-DRm" id="KVs-Zh-IIx"/>
+                        <outlet property="spinner" destination="3Rd-wp-FY3" id="ZRm-iw-sZs"/>
                         <outlet property="tableView" destination="3on-Yr-AwU" id="nzw-9Q-1E6"/>
                         <outlet property="viewSelector" destination="3hP-Eb-eGJ" id="l2p-Bq-ZBe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="830" y="-207"/>
+            <point key="canvasLocation" x="1508" y="-450"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="MBq-rM-BfK">
@@ -85,15 +112,19 @@
                                     <constraint firstAttribute="width" constant="768" id="TwZ-2e-dtv"/>
                                 </constraints>
                             </webView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="j26-ij-Ij8"/>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="PkO-By-auC" firstAttribute="leading" secondItem="orL-cf-L79" secondAttribute="leading" constant="-5" id="YuM-eu-Zbv"/>
+                            <constraint firstItem="j26-ij-Ij8" firstAttribute="centerX" secondItem="orL-cf-L79" secondAttribute="centerX" type="default" id="k1j-CQ-ngk"/>
+                            <constraint firstItem="j26-ij-Ij8" firstAttribute="centerY" secondItem="orL-cf-L79" secondAttribute="centerY" type="default" id="rHc-B3-xXK"/>
                             <constraint firstItem="PkO-By-auC" firstAttribute="top" secondItem="orL-cf-L79" secondAttribute="top" type="default" id="th5-Hk-KlQ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="aUy-A2-bg1"/>
                     <connections>
+                        <outlet property="spinner" destination="j26-ij-Ij8" id="QOl-OJ-2M1"/>
                         <outlet property="webView" destination="PkO-By-auC" id="rPr-ZR-7fr"/>
                     </connections>
                 </viewController>
@@ -124,6 +155,7 @@
         <class className="DetailViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/DetailViewController.h"/>
             <relationships>
+                <relationship kind="outlet" name="spinner" candidateClass="UIActivityIndicatorView"/>
                 <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
             </relationships>
         </class>
@@ -135,6 +167,8 @@
             <relationships>
                 <relationship kind="action" name="selectView:"/>
                 <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
+                <relationship kind="outlet" name="searchField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="spinner" candidateClass="UIActivityIndicatorView"/>
                 <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
                 <relationship kind="outlet" name="viewSelector" candidateClass="UISegmentedControl"/>
             </relationships>

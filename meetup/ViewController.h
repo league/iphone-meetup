@@ -18,6 +18,8 @@
 @property NSMutableArray *meetups;
 @property CLLocationManager *locManager;
 @property Meetup *selectedMeetup;
+@property IBOutlet UIActivityIndicatorView *spinner;
+@property IBOutlet UITextField *searchField;
 
 -(IBAction)selectView:(id)sender;
 @end

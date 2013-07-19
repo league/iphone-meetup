@@ -9,7 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "Meetup.h"
 
-@interface DetailViewController : UIViewController
+@interface DetailViewController : UIViewController<UIWebViewDelegate>
 @property IBOutlet UIWebView *webView;
 @property Meetup *meetup;
+@property IBOutlet UIActivityIndicatorView *spinner;
+
 @end

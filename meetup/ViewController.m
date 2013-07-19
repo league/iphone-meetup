@@ -20,6 +20,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    self.selectedMeetup = nil;
     self.locManager = [[CLLocationManager alloc] init];
     self.locManager.delegate = self;
     [self.locManager startUpdatingLocation];
@@ -62,13 +63,19 @@
     MKCoordinateRegion region =
     MKCoordinateRegionMakeWithDistance(loc.coordinate, 10000, 10000);
     [self.mapView setRegion:region];
+    self.spinner.hidden = YES;
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     DetailViewController *dvc = segue.destinationViewController;
-    NSIndexPath *path = [self.tableView indexPathForSelectedRow];
-    dvc.meetup = [self.meetups objectAtIndex:path.row];
+    if(self.selectedMeetup) {
+        dvc.meetup = self.selectedMeetup;
+        self.selectedMeetup = nil;
+    } else {
+        NSIndexPath *path = [self.tableView indexPathForSelectedRow];
+        dvc.meetup = [self.meetups objectAtIndex:path.row];
+    }
 }
 
 - (void)didReceiveMemoryWarning
