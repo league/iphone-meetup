@@ -29,7 +29,7 @@
 
 +(NSMutableArray*) queryMeetupsNear:(CLLocationCoordinate2D)coordinate
 {
-    static const NSString *apiKey = @"67404c7c337322a573295f18794413";
+    static const NSString *apiKey = @"YOUR-KEY-HERE";
     NSString *tmp = [NSString stringWithFormat:
                      @"https://api.meetup.com/2/open_events.json?lat=%lf&lon=%lf&time=,1w&key=%@",
                      coordinate.latitude,
